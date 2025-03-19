@@ -1,0 +1,120 @@
+:root{  
+    --blanco: #ffffff;
+    --oscuro: #212121;    /* esto se indica con var()*/
+    --primario: #ffc107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+/*parametros globales para casi todos los codigos css*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* hack para el box model*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body{
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, #eef3f8 0%, var(--blanco) 30%);
+}
+/*con esto le damos automaticamente la fuente de letra a los titutlos*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+/*aqui ya empiezan los elementos*/
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    width: 120rem;   
+    /* margin-top: 0%;
+    margin-right: auto;
+    margin-bottom: 0%;
+    margin-left: auto; */
+    margin: 0 auto;
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem; /*esto le da el borde redondeado al boton*/
+}
+/*Naveacion principal*/
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*Esto es para centrar el bloque de texto en el bloque*/
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.sombra{
+    -webkit-box-shadow: 10px 5px 15px 0px rgba(120,120,120,1);
+    -moz-box-shadow: 10px 5px 15px 0px rgba(120,120,120,1);
+    box-shadow: 10px 5px 15px 0px rgba(120,120,120,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}  
